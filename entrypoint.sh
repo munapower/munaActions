@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-
+http --version
 # do something
     VERSION=$(date +%F.%s)
 
