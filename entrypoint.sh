@@ -1,19 +1,7 @@
 #!/bin/bash
 set -e
 
-if [ -n "$GITHUB_EVENT_PATH" ];
-then
-    EVENT_PATH=$GITHUB_EVENT_PATH
-else
-    echo "No JSON data to process! :("
-    exit 1
-fi
-
-env
-jq . < $EVENT_PATH
-
-
-    # do something
+# do something
     VERSION=$(date +%F.%s)
 
     DATA="$(printf '{"tag_name":"v%s",' $VERSION)"
